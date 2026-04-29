@@ -12,7 +12,7 @@ const liveClasses = [
       id: "jkssb",
       title: "JKSSB Computer",
       mentor: "Arun Singh Katoch",
-      time: "Starts at 7:30 AM",
+      time: "Starts at 9:00 PM",
       icon: "📅",
       videoId: "YOUR_YOUTUBE_VIDEO_ID",
     },

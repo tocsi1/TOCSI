@@ -106,17 +106,37 @@ const Contact = () => {
                 </h3>
 
                 <div className="flex flex-wrap gap-4">
-                  {["LinkedIn", "Instagram", "YouTube", "Facebook"].map((item) => (
-                    <a
-                      key={item}
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white/10 px-4 py-2 rounded-lg hover:bg-yellow-400 hover:text-purple-900 transition"
-                    >
-                      {item}
-                    </a>
-                  ))}
+                
+                
+                {[
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/arun-singh-katoch-32b688393"
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/tocsi_17/"
+  },
+  {
+    name: "YouTube",
+    url: "https://www.youtube.com/@tocsi_education"
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/tocsi"
+  }
+].map((item) => (
+  <a
+    key={item.name}
+    href={item.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-white/10 px-4 py-2 rounded-lg hover:bg-yellow-400 hover:text-purple-900 transition"
+  >
+    {item.name}
+  </a>
+))}
+
                 </div>
               </div>
             </div>
