@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -65,7 +65,7 @@ const Navbar = () => {
     </nav>
   );
 };
-=======
+
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -132,5 +132,5 @@ const Navbar = () => {
     </nav>
   );
 };
->>>>>>> 338b2c97f7e46148fc166ca8077e8278819aa3ad
+
 export default Navbar;
