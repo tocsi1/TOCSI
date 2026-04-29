@@ -6,7 +6,7 @@ const liveClasses = [
       mentor: "Arun Singh Katoch",
       time: "Starts at 7:00 PM",
       icon: "⏰",
-      videoId: "k8sVl1uRjKo",
+      videoId: "YOUR_YOUTUBE_VIDEO_ID",
     },
     {
       id: "jkssb",
