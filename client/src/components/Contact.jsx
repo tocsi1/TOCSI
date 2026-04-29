@@ -27,7 +27,7 @@ const Contact = () => {
     setStatus({ type: "", text: "" });
 
     try {
-      const response = await fetch("http://localhost:5000/contact", {
+      const response = await fetch("https://tocsi-backend.onrender.com/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
