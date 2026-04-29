@@ -18,7 +18,8 @@ const Navbar = () => {
         <img
           src="/images/tocsi_logo.png"
           alt="TOCSI Logo"
-          className="w-12 h-12 object-contain rectangular-full shadow-lg rectangular ring-purple-0/40"
+          className="w-30 h-20 object-cover rounded-lg border-2 border-yellow-600 shadow-lg"
+          
         />
 
         <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent italic">

@@ -10,7 +10,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="absolute -inset-4 bg-purple-100 rounded-2xl rotate-3"></div>
-            <img src="/public/images/mentorImage.png" alt="Arun Singh Katoch" className="relative rounded-2xl shadow-xl w-full max-w-md mx-auto" />
+            <img src="/images/mentorImage.png" alt="Arun Singh Katoch" className="relative rounded-2xl shadow-xl w-full max-w-md mx-auto" />
           </div>
           <div>
             <h2 className="text-purple-600 font-bold uppercase tracking-wider mb-2">About Mentor</h2>
