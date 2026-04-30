@@ -20,6 +20,17 @@ function Research() {
   return (
     <main className="min-h-screen overflow-hidden text-white font-[Poppins] bg-[radial-gradient(circle_at_top_left,rgba(255,215,0,0.13),transparent_28%),radial-gradient(circle_at_85%_20%,rgba(124,58,237,0.32),transparent_30%),linear-gradient(135deg,#1a1a2e_0%,#211033_45%,#301934_100%)]">
 
+{/* BACK TO HOME BUTTON */}
+      <div className="absolute top-30 left-6 z-50">
+        <Link
+          to="/"
+          className="flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold hover:bg-white/20 transition"
+        >
+          <ArrowLeft size={18} />
+          Back
+        </Link>
+      </div>
+
       {/* Hero */}
       <section className="relative min-h-[82vh] flex items-center text-center px-6 py-28">
         <div className="absolute inset-[80px_10%] rounded-full blur-[70px] bg-gradient-to-br from-yellow-300/10 to-blue-400/10"></div>

@@ -34,7 +34,7 @@ const AboutTocsi = () => {
           className="flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold hover:bg-white/20 transition"
         >
           <ArrowLeft size={18} />
-          Back to Home
+          Back
         </Link>
       </div>
 
