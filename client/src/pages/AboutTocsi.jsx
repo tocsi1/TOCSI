@@ -27,16 +27,18 @@ const fadeUp = {
 const AboutTocsi = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-white overflow-hidden relative">
-      {/* BACK TO HOME BUTTON */}
-      <div className="absolute top-30 left-6 z-50">
-        <Link
-          to="/"
-          className="flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold hover:bg-white/20 transition"
-        >
-          <ArrowLeft size={18} />
-          Back
-        </Link>
-      </div>
+     
+     
+     {/* BACK TO HOME BUTTON */}
+    <div className="fixed top-22 left-4 z-50">
+      <Link
+        to="/"
+        className="flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold text-white hover:bg-white/20 transition shadow-lg"
+      >
+        <ArrowLeft size={18} />
+        Back
+      </Link>
+    </div>
 
       {/* BACKGROUND DECORATION */}
       <div className="absolute inset-0 -z-10">

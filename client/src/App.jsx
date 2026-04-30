@@ -15,6 +15,7 @@ import JkssbCs from './components/JkssbCs';
 import AboutTocsi from "./pages/AboutTocsi";
 import Research from "./pages/Research";
 import LiveClasses from "./pages/LiveClasses";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 import Login from "./pages/Login";
@@ -44,6 +45,7 @@ function ScrollToSection() {
 function App() {
   return (
     <Router>
+       <ScrollToTop />
       <ScrollToSection />
       <div className="min-h-screen bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
         <Navbar />
