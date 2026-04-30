@@ -76,11 +76,11 @@ function App() {
 
           {/* COURSE DETAILS ROUTE */}
 
-          {/* <Route path="/ugc-net-paper-1" element={<UgcNetPaper1 />} />
+          <Route path="/ugc-net-paper-1" element={<UgcNetPaper1 />} />
           <Route path="/ugc-net-paper-2" element={<UgcNetPaper2Cs />} />
-          <Route path="/jkssb" element={<JkssbCs />} /> */}
+          <Route path="/jkssb" element={<JkssbCs />} />
 
-{/* PROTECTED COURSE DETAILS ROUTES */}
+{/* PROTECTED COURSE DETAILS ROUTES
           <Route
             path="/ugc-net-paper-1"
             element={
@@ -106,7 +106,7 @@ function App() {
                 <JkssbCs />
               </ProtectedRoute>
             }
-          />
+          /> */}
 
 {/* AUTH ROUTES */}
           <Route path="/login" element={<Login />} />
