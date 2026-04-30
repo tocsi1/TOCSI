@@ -17,37 +17,50 @@ const Hero = () => {
 
 
 {/* badge premium course */}
-          <a
+
+{/* href="https://forms.gle/RAjFhqPTRUkvYEWq9" */}
+
+          
+
+<a
   href="https://forms.gle/RAjFhqPTRUkvYEWq9"
   target="_blank"
   rel="noopener noreferrer"
-  className="absolute right-10 top-60 -translate-y-1/2 hidden md:block group"
+  className="
+    block 
+    mx-auto mt-6
+    md:absolute md:right-12 md:top-28 md:mt-0
+    group
+  "
 >
-  <div className="relative w-48 rounded-3xl p-[3px] bg-gradient-to-r from-yellow-300 via-pink-500 to-purple-500 shadow-2xl hover:scale-105 transition duration-300">
+  <div className="relative w-40 sm:w-44 md:w-48 rounded-3xl p-[3px] bg-gradient-to-r from-yellow-300 via-pink-500 to-purple-500 shadow-2xl hover:scale-105 transition duration-300">
     
-    <div className="absolute -top-3 -right-3 bg-red-600 text-white text-xs font-extrabold px-3 py-1 rounded-full animate-pulse shadow-lg">
+    <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] sm:text-xs font-extrabold px-3 py-1 rounded-full animate-pulse shadow-lg">
       HOT
     </div>
 
-    <div className="rounded-3xl bg-white/95 backdrop-blur-xl p-5 text-center">
-      <p className="text-xs font-bold text-purple-700 uppercase tracking-wide">
+    <div className="rounded-3xl bg-white/95 backdrop-blur-xl p-4 sm:p-5 text-center">
+      <p className="text-[10px] sm:text-xs font-bold text-purple-700 uppercase tracking-wide">
         Limited Offer
       </p>
 
-      <h3 className="mt-2 text-lg font-extrabold text-purple-950 leading-tight">
+      <h3 className="mt-2 text-sm sm:text-base md:text-lg font-extrabold text-purple-950 leading-tight">
         Join Paper-1 Premium
       </h3>
 
-      <div className="my-4">
-        <span className="text-4xl font-black text-red-600">₹1499</span>
+      <div className="my-3 sm:my-4">
+        <span className="text-3xl sm:text-4xl font-black text-red-600">₹1499</span>
       </div>
 
-      <div className="bg-gradient-to-r from-purple-700 to-indigo-700 text-white py-2 rounded-xl text-sm font-bold shadow-md group-hover:from-yellow-400 group-hover:to-orange-400 group-hover:text-purple-950 transition">
+      <div className="bg-gradient-to-r from-purple-700 to-indigo-700 text-white py-2 rounded-xl text-xs sm:text-sm font-bold shadow-md group-hover:from-yellow-400 group-hover:to-orange-400 group-hover:text-purple-950 transition">
         Enroll Now
       </div>
     </div>
   </div>
 </a>
+
+
+
 
 
 
