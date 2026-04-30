@@ -227,13 +227,42 @@ const UgcNetPaper1 = () => {
               </div>
             </div>
 
+
+
             <div className="mt-8 bg-gradient-to-br from-purple-600 to-indigo-700 p-6 rounded-2xl text-white">
-              <p className="text-sm opacity-80 mb-2">Ready to excel?</p>
-              <h5 className="text-lg font-bold mb-4">Join Live Mentorship</h5>
-              <button className="w-full bg-white text-purple-700 py-3 rounded-xl font-bold text-sm hover:bg-yellow-400 hover:text-purple-950 transition">
-                Book Free Demo
-              </button>
+              <p className="text-sm opacity-80 mb-2">Ready to upgrade?</p>
+              <h5 className="text-lg font-bold mb-4">Join TOCSI Premium Course</h5>
+
+              <a 
+                href="https://forms.gle/tmYafWZk7paiBdCm6" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full text-center bg-white text-purple-700 py-3 rounded-xl font-bold text-sm hover:bg-yellow-400 hover:text-purple-950 transition"
+              >
+                Join Premium Course
+              </a>
             </div>
+            
+
+            <div className="mt-8 bg-gradient-to-br from-purple-600 to-indigo-700 p-6 rounded-2xl text-white">
+              <p className="text-sm opacity-80 mb-2">Ready to explore?</p>
+              <h5 className="text-lg font-bold mb-4">Book Your Free Demo Class</h5>
+
+              <a 
+                href="https://forms.gle/2DdzDdZgBBpU1KY9A" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full text-center bg-white text-purple-700 py-3 rounded-xl font-bold text-sm hover:bg-yellow-400 hover:text-purple-950 transition"
+              >
+                Book Free Demo
+              </a>
+            </div>
+
+
+
+
+
+
           </div>
         </div>
 
