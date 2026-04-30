@@ -268,7 +268,7 @@ const AboutTocsi = () => {
             </p>
 
             <p className="text-slate-300 leading-8 mb-5">
-              My journey as a learner, a researcher, and now an <span className="text-yellow-400">Assistant Professor</span>
+              My journey as a learner, a researcher, and now an <span className="text-yellow-400">Assistant Professor  </span>
               taught me that talent alone is not enough—students also need the right guidance, the right environment,
               and someone who genuinely believes in their potential. That is why TOCSI was built: so that no sincere
               aspirant has to walk the difficult road alone.
