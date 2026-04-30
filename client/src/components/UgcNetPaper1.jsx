@@ -231,7 +231,11 @@ const UgcNetPaper1 = () => {
 
             <div className="mt-8 bg-gradient-to-br from-purple-600 to-indigo-700 p-6 rounded-2xl text-white">
               <p className="text-sm opacity-80 mb-2">Ready to upgrade?</p>
-              <h5 className="text-lg font-bold mb-4">Join TOCSI Premium Course</h5>
+              {/* <h5 className="text-lg font-bold mb-4">Join TOCSI Premium Course</h5> */}
+
+              <p className="mb-4 text-center text-sm font-extrabold text-yellow-300 bg-purple-950 px-4 py-2 rounded-full animate-pulse shadow-lg">
+                Join TOCSI Premium Course at ₹1499
+              </p>
 
               <a 
                 href="https://forms.gle/tmYafWZk7paiBdCm6" 
