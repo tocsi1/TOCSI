@@ -16,9 +16,9 @@ const Hero = () => {
           </h1>
 
 
-{/* badge */}
+{/* badge premium course */}
           <a
-  href="YOUR_GOOGLE_FORM_LINK"
+  href="https://forms.gle/RAjFhqPTRUkvYEWq9"
   target="_blank"
   rel="noopener noreferrer"
   className="absolute right-10 top-60 -translate-y-1/2 hidden md:block group"
