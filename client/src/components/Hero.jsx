@@ -17,7 +17,7 @@ const Hero = () => {
           className="text-center"
         >
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-            Transforming <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent">Aspirations</span> <br/>into Achievements
+            Transforming <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent"> Aspirations </span> <br/> into <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent"> Achievements </span>
           </h1>
 
           {/* badge premium course */}
