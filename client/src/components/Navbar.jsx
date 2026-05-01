@@ -31,6 +31,10 @@ const Navbar = () => {
     return () => unsubscribe();
   }, []);
 
+
+
+  
+
   // Logout user and remove access
   const handleLogout = async () => {
     try {
@@ -54,7 +58,7 @@ const Navbar = () => {
       setShowProfileMenu(false);
       setIsOpen(false);
 
-      navigate("/login", {
+      navigate("/", {
         state: {
           message: "You have been logged out successfully."
         }
@@ -80,6 +84,9 @@ const Navbar = () => {
             <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent italic">
             </span>
           </div>
+
+
+
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8 font-semibold text-slate-700">
@@ -177,6 +184,7 @@ const Navbar = () => {
 
 
 
+
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-md shadow-xl border-t border-purple-100 px-6 py-6 flex flex-col gap-5 font-semibold text-slate-700 z-[9999]">
@@ -189,13 +197,15 @@ const Navbar = () => {
               Courses
             </Link>
 
+
             <Link
-              to="/about-tocsi"
+              to="/live"
               onClick={() => setIsOpen(false)}
               className="hover:text-purple-600 transition"
             >
-              About
+              Live Classes
             </Link>
+
 
             <Link
               to="/research"
@@ -206,20 +216,26 @@ const Navbar = () => {
             </Link>
 
             <Link
-              to="/live"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-purple-600 transition"
-            >
-              Live Classes
-            </Link>
-
-            <Link
               to="/#contact"
               onClick={() => setIsOpen(false)}
               className="hover:text-purple-600 transition"
             >
               Contact
             </Link>
+
+            <Link
+              to="/about-tocsi"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-purple-600 transition"
+            >
+              About TOCSI
+            </Link>
+
+            
+
+            
+
+            
 
             
 
