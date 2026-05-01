@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -104,11 +103,15 @@ const UgcNetPaper1 = () => {
   );
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans">
+    <div className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#2a1f4a] to-[#1a1a2e] font-sans text-white">
       {/* --- PREMIUM HERO SECTION --- */}
-      <div className="bg-purple-950 pt-32 pb-40 px-6 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-[#1a1a2e] via-[#2a1f4a] to-[#1a1a2e] pt-32 pb-40 px-6 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-purple-500/30 blur-[140px] rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-[520px] h-[520px] bg-indigo-500/30 blur-[160px] rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 w-[320px] h-[320px] bg-yellow-400/10 blur-[120px] rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+
         <div className="max-w-7xl mx-auto relative z-10">
-          <Link to="/" className="flex items-center text-purple-200 hover:text-white transition mb-8 group">
+          <Link to="/" className="flex items-center text-yellow-300 hover:text-white transition mb-8 group font-bold">
             <ArrowLeft size={20} className="mr-2 group-hover:-translate-x-2 transition-transform" />
             Back to Home
           </Link>
@@ -118,9 +121,9 @@ const UgcNetPaper1 = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-              UGC NET <span className="text-yellow-400 underline decoration-wavy">Paper 1</span>
+              UGC NET <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent underline decoration-wavy decoration-yellow-400">Paper 1</span>
             </h1>
-            <p className="text-purple-200 text-xl max-w-2xl leading-relaxed">
+            <p className="text-slate-300 text-xl max-w-2xl leading-relaxed">
               Master the General Paper on Teaching and Research Aptitude with our unit-wise structured roadmap and premium resources.
             </p>
           </motion.div>
@@ -130,16 +133,16 @@ const UgcNetPaper1 = () => {
       </div>
 
       {/* --- INTERACTIVE CONTENT AREA --- */}
-      <main className="max-w-7xl mx-auto px-6 -mt-24 pb-20 grid lg:grid-cols-3 gap-12">
+      <main className="max-w-7xl mx-auto px-6 -mt-24 pb-20 grid lg:grid-cols-3 gap-12 relative z-10">
         
         {/* Left Column: Syllabus Roadmap */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white p-6 rounded-3xl shadow-xl flex items-center gap-4 border border-slate-100">
-            <Search className="text-slate-400" />
+          <div className="bg-white/10 backdrop-blur-xl p-6 rounded-3xl shadow-2xl flex items-center gap-4 border border-white/10 focus-within:ring-2 ring-yellow-400 transition-all">
+            <Search className="text-slate-300" />
             <input 
               type="text" 
               placeholder="Search a topic or unit (e.g. Research Ethics)..." 
-              className="w-full bg-transparent border-none outline-none text-slate-700"
+              className="w-full bg-transparent border-none outline-none text-white placeholder-slate-400"
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
@@ -149,22 +152,22 @@ const UgcNetPaper1 = () => {
               <motion.div 
                 layout
                 key={unit.id}
-                className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden"
+                className="bg-white/10 backdrop-blur-xl rounded-2xl shadow-sm border border-white/10 overflow-hidden hover:border-yellow-400/50 hover:shadow-[0_0_35px_rgba(250,204,21,0.16)] transition-all duration-500"
               >
                 <button 
                   onClick={() => setActiveUnit(activeUnit === unit.id ? null : unit.id)}
-                  className="w-full p-6 flex items-center justify-between hover:bg-slate-50 transition"
+                  className="w-full p-6 flex items-center justify-between hover:bg-white/10 transition"
                 >
                   <div className="flex items-center gap-4 text-left">
-                    <div className={`${unit.color} p-3 rounded-xl shadow-lg shadow-purple-200`}>
+                    <div className={`${unit.color} p-3 rounded-xl shadow-lg shadow-purple-900/30`}>
                       {unit.icon}
                     </div>
                     <div>
-                      <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Unit {unit.id}</span>
-                      <h3 className="text-lg font-bold text-slate-800">{unit.title}</h3>
+                      <span className="text-xs font-bold text-yellow-300 uppercase tracking-widest">Unit {unit.id}</span>
+                      <h3 className="text-lg font-bold text-white">{unit.title}</h3>
                     </div>
                   </div>
-                  <ChevronDown className={`text-slate-400 transition-transform ${activeUnit === unit.id ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`text-slate-300 transition-transform ${activeUnit === unit.id ? 'rotate-180' : ''}`} />
                 </button>
 
                 <AnimatePresence>
@@ -175,15 +178,15 @@ const UgcNetPaper1 = () => {
                       exit={{ height: 0 }}
                       className="px-6 pb-6"
                     >
-                      <div className="pt-4 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-3">
+                      <div className="pt-4 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-3">
                         {unit.topics.map((topic, i) => (
-                          <div key={i} className="flex items-center gap-2 text-slate-600 p-3 bg-slate-50 rounded-xl text-sm">
-                            <CheckCircle size={16} className="text-green-500" />
+                          <div key={i} className="flex items-center gap-2 text-slate-300 p-3 bg-white/5 rounded-xl text-sm hover:bg-purple-600/20 hover:text-yellow-300 transition cursor-default">
+                            <CheckCircle size={16} className="text-green-400" />
                             {topic}
                           </div>
                         ))}
                       </div>
-                      <button className="mt-6 w-full py-3 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-700 transition shadow-lg shadow-purple-100">
+                      <button className="mt-6 w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl font-bold hover:scale-[1.02] transition shadow-lg shadow-purple-900/30">
                         Start Unit {unit.id} Lessons
                       </button>
                     </motion.div>
@@ -196,32 +199,32 @@ const UgcNetPaper1 = () => {
 
         {/* Right Column: Sticky Resource Sidebar */}
         <div className="space-y-8">
-          <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-slate-100 sticky top-28">
-            <h4 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-              <Target className="text-purple-600" /> Exam Resources
+          <div className="bg-white/10 backdrop-blur-xl p-8 rounded-[2rem] shadow-2xl border border-white/10 sticky top-28">
+            <h4 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <Target className="text-yellow-300" /> Exam Resources
             </h4>
             
             <div className="space-y-4">
-              <div className="p-4 bg-slate-50 rounded-2xl hover:bg-purple-50 transition group cursor-pointer border border-transparent hover:border-purple-200">
+              <div className="p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition group cursor-pointer border border-white/10 hover:border-yellow-400/40">
                 <div className="flex items-center gap-4">
                   <div className="bg-yellow-400 p-3 rounded-xl group-hover:scale-110 transition">
                     <FileText size={24} className="text-purple-900" />
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-800">Mock Tests</h5>
-                    <p className="text-xs text-slate-500">15+ Full Length Tests</p>
+                    <h5 className="font-bold text-white">Mock Tests</h5>
+                    <p className="text-xs text-slate-400">15+ Full Length Tests</p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-4 bg-slate-50 rounded-2xl hover:bg-purple-50 transition group cursor-pointer border border-transparent hover:border-purple-200">
+              <div className="p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition group cursor-pointer border border-white/10 hover:border-yellow-400/40">
                 <div className="flex items-center gap-4">
                   <div className="bg-green-400 p-3 rounded-xl group-hover:scale-110 transition">
                     <Rocket size={24} className="text-purple-900" />
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-800">PYP Archive</h5>
-                    <p className="text-xs text-slate-500">Previous Year Papers</p>
+                    <h5 className="font-bold text-white">PYP Archive</h5>
+                    <p className="text-xs text-slate-400">Previous Year Papers</p>
                   </div>
                 </div>
               </div>
@@ -229,7 +232,7 @@ const UgcNetPaper1 = () => {
 
 
 
-            <div className="mt-8 bg-gradient-to-br from-purple-600 to-indigo-700 p-6 rounded-2xl text-white">
+            <div className="mt-8 bg-gradient-to-br from-purple-600 to-indigo-700 p-6 rounded-2xl text-white shadow-2xl">
               <p className="text-sm opacity-80 mb-2">Ready to upgrade?</p>
               {/* <h5 className="text-lg font-bold mb-4">Join TOCSI Premium Course</h5> */}
 
@@ -248,7 +251,7 @@ const UgcNetPaper1 = () => {
             </div>
             
 
-            <div className="mt-8 bg-gradient-to-br from-purple-600 to-indigo-700 p-6 rounded-2xl text-white">
+            <div className="mt-8 bg-gradient-to-br from-purple-600 to-indigo-700 p-6 rounded-2xl text-white shadow-2xl">
               <p className="text-sm opacity-80 mb-2">Ready to explore?</p>
               <h5 className="text-lg font-bold mb-4">Book Your Free Demo Class</h5>
 

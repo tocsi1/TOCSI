@@ -24,6 +24,27 @@ const fadeUp = {
   show: { opacity: 1, y: 0 },
 };
 
+const visionFadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.12,
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  }),
+};
+
+const visionMissionPoints = [
+  "Provide the right direction to youth",
+  "Help them realize their life’s purpose",
+  "Transform distraction and procrastination into focus and action",
+  "Replace confusion with clarity and vision",
+  "Nurture them into rational thinkers, researchers, scientists, innovators, and leaders",
+];
+
 const AboutTocsi = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-white overflow-hidden relative">
@@ -62,16 +83,216 @@ const AboutTocsi = () => {
               About TOCSI
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+            {/* <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
               Transforming Aspirations into{" "}
               <span className="text-yellow-400">Achievements</span>
-            </h1>
+            </h1> */}
 
-            <p className="max-w-4xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed">
-              TOCSI is more than an educational platform. It is a visionary movement committed to
-              bridging the gap between aspiration and achievement by empowering the youth of India
-              with high-quality, accessible, and purpose-driven education.
+           
+
+           
+
+
+
+
+
+
+
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ADVANCED OUR VISION SECTION */}
+      <section className="relative overflow-hidden bg-[#050816] text-white py-24 px-5 md:px-10 lg:px-20">
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-violet-700/30 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-indigo-800/40 rounded-full blur-[180px]" />
+        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-yellow-400/10 rounded-full blur-[120px]" />
+
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <motion.div
+            variants={visionFadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <span className="inline-block px-6 py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 text-yellow-300 text-sm md:text-base tracking-[0.25em] uppercase font-semibold">
+              Our Vision
+            </span>
+          </motion.div>
+
+          <motion.h1
+            variants={visionFadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="font-[Montserrat] text-center text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-10"
+          >
+            TOCSI is not just a platform —
+            <br />
+            <span className="bg-gradient-to-r from-yellow-300 via-yellow-500 to-orange-400 bg-clip-text text-transparent">
+              it is a vision.
+            </span>
+          </motion.h1>
+
+          <motion.div
+            variants={visionFadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="max-w-5xl mx-auto mb-16 p-8 md:p-10 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl"
+          >
+            <p className="font-[Poppins] text-lg md:text-xl lg:text-2xl leading-[1.9] text-slate-200 text-center">
+              TOCSI{" "}
+              <span className="text-yellow-300 font-semibold">
+                (Team of Collaborative Studies and Innovation)
+              </span>{" "}
+              is not just a platform — it is a vision to guide every young mind towards clarity, purpose, and meaningful direction in life, with a belief that empowered youth are the foundation of a{" "}
+              <span className="text-yellow-300 font-bold">Viksit Bharat</span>.
             </p>
+          </motion.div>
+
+          <motion.div
+            variants={visionFadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
+            className="relative mb-16 rounded-[2rem] p-[1px] bg-gradient-to-r from-yellow-400/60 via-violet-500/50 to-indigo-500/50"
+          >
+            <div className="rounded-[2rem] bg-[#0b1026]/90 backdrop-blur-xl p-8 md:p-12">
+              <h2 className="font-[Montserrat] text-3xl md:text-5xl font-bold mb-6">
+                The Soul of the Vision
+              </h2>
+
+              <p className="font-[Poppins] text-lg md:text-xl lg:text-2xl leading-[1.9] text-slate-300">
+                I envision an India that stands as a true{" "}
+                <span className="text-yellow-300 font-bold">Vishwa Guru</span>{" "}
+                — I envision an INDIA that stands as a true{" "}
+                <span className="text-yellow-300 font-bold">Vishwa Guru</span>{" "}
+                — a developed and self-reliant nation that leads the world through knowledge, wisdom, innovation, values, and global leadership.
+              </p>
+
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="mt-10 p-6 rounded-2xl bg-yellow-400/10 border border-yellow-400/30"
+              >
+                <p className="font-[Montserrat] text-2xl md:text-4xl font-extrabold text-center">
+                  But this transformation begins with one powerful force:
+                  <span className="text-yellow-300"> our YOUTH.</span>
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8 mb-20">
+            <motion.div
+              custom={1}
+              variants={visionFadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-xl p-8 md:p-10 hover:border-yellow-400/40 transition-all duration-500"
+            >
+              <h3 className="font-[Montserrat] text-2xl md:text-4xl font-bold mb-6 text-yellow-300">
+                The Reality
+              </h3>
+
+              <p className="font-[Poppins] text-lg md:text-xl leading-[1.9] text-slate-300">
+                Today, many young minds are full of energy, yet often lack direction. In a world filled with constant distraction, rising procrastination, and a growing lack of clarity and purpose, even the most capable individuals struggle to channel their potential effectively. They have dreams, but often find themselves unable to translate those dreams into meaningful action.
+              </p>
+            </motion.div>
+
+            <motion.div
+              custom={2}
+              variants={visionFadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-xl p-8 md:p-10 hover:border-yellow-400/40 transition-all duration-500"
+            >
+              <h3 className="font-[Montserrat] text-2xl md:text-4xl font-bold mb-6 text-yellow-300">
+                My Mission
+              </h3>
+
+              <p className="font-[Poppins] text-lg md:text-xl leading-[1.9] text-slate-300">
+                My mission is to guide this energy in the right direction — to help every student overcome confusion, discover their true potential, define their goals, and move forward with clarity, discipline, and confidence.
+              </p>
+            </motion.div>
+          </div>
+
+          <motion.div
+            variants={visionFadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mb-20"
+          >
+            <h2 className="font-[Montserrat] text-center text-3xl md:text-5xl font-extrabold mb-12">
+              Through TOCSI, I aim to:
+            </h2>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {visionMissionPoints.map((point, index) => (
+                <motion.div
+                  key={index}
+                  variants={visionFadeUp}
+                  custom={index}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  whileHover={{
+                    scale: 1.06,
+                    y: -10,
+                  }}
+                  className="group min-h-[180px] rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl p-6 flex items-center justify-center text-center cursor-pointer transition-all duration-500 hover:border-yellow-400/60 hover:shadow-[0_0_35px_rgba(250,204,21,0.25)]"
+                >
+                  <p className="font-[Poppins] text-lg md:text-xl leading-relaxed text-slate-200 group-hover:text-yellow-200 transition">
+                    {point}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={visionFadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            className="max-w-5xl mx-auto mb-16 text-center rounded-[2rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/10 p-8 md:p-12 backdrop-blur-xl"
+          >
+            <p className="font-[Montserrat] text-2xl md:text-4xl font-bold leading-snug">
+              I believe that empowering young minds is not just education —
+              <br />
+              <span className="bg-gradient-to-r from-yellow-300 via-yellow-500 to-orange-400 bg-clip-text text-transparent">
+                it is the highest form of service, the purest form of patriotism.
+              </span>
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={visionFadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="relative text-center rounded-[2.5rem] p-[1px] bg-gradient-to-r from-yellow-400 via-violet-500 to-indigo-500"
+          >
+            <div className="rounded-[2.5rem] bg-[#070b1d]/95 p-8 md:p-14">
+              <p className="font-[Poppins] text-lg md:text-2xl leading-[1.9] text-slate-300 mb-8">
+                When our youth rise above distraction, act with purpose, and move with discipline and vision — India will not just grow, it will lead — towards a truly{" "}
+                <span className="text-yellow-300 font-bold">Viksit Bharat</span>{" "}
+                and a global{" "}
+                <span className="text-yellow-300 font-bold">Vishwa Guru</span>.
+              </p>
+
+              <h2 className="font-[Montserrat] text-3xl md:text-6xl font-extrabold bg-gradient-to-r from-yellow-300 via-yellow-500 to-orange-400 bg-clip-text text-transparent">
+                Viksit Bharat. Vishwa Guru.
+              </h2>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -93,21 +314,20 @@ const AboutTocsi = () => {
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              A Movement for Nation-Building Through Education
+            A Movement for Purpose, Direction, and Nation-Building
             </h2>
 
             <p className="text-slate-300 leading-8 mb-5">
-              TOCSI, the <span className="text-yellow-400">Team of Collaborative Studies and Innovation</span>,
-              was founded with a clear purpose: to make quality education reach every learner, from every
-              background, in every corner of India. We are not just preparing students for UGC-NET, GATE,
-              JKSSB, and other competitive examinations—we are nurturing the next generation of scholars,
-              thinkers, innovators, and nation-builders.
+            TOCSI, the Team of Collaborative Studies and Innovation, was founded with a simple yet powerful belief — that every young mind holds immense potential, but what truly shapes that potential is the right direction.
+
+TOCSI is not limited to preparing individuals for examinations; it is about guiding them to think clearly, act purposefully, and move forward with confidence. It is about helping individuals rise above confusion, overcome distraction, and transform their energy into meaningful action.
+
             </p>
 
             <p className="text-slate-300 leading-8">
-              Our mission is to create a learning ecosystem where excellence is accessible, mentorship is meaningful,
-              and ambition is supported with strategy, structure, and sincerity. TOCSI is not merely a coaching
-              center; it is a commitment to transforming potential into performance and dreams into disciplined success.
+            At its core, TOCSI is an ecosystem where ideas evolve into clarity, ambition turns into disciplined effort, and potential transforms into purposeful impact. It is a space where individuals are not just prepared for exams, but prepared for life — as thinkers, innovators, leaders, and contributors to a stronger and self-reliant nation.
+
+Because true nation-building does not begin with systems — it begins with individuals who have clarity, purpose, and the courage to act.
             </p>
           </motion.div>
 

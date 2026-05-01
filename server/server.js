@@ -10,7 +10,14 @@ const app = express();
 
 connectDB();
 
-app.use(cors());
+// app.use(cors()); 
+
+app.use(cors({
+  origin: "https://tocsi.netlify.app",
+  methods: ["GET", "POST"],
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.use("/contact", contactRoutes);
