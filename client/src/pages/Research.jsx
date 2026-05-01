@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import Contact from "../components/Contact";
@@ -22,15 +21,15 @@ import {
 
 function Research() {
   return (
-    <main className="min-h-screen overflow-hidden text-white font-[Poppins] bg-[radial-gradient(circle_at_top_left,rgba(255,215,0,0.13),transparent_28%),radial-gradient(circle_at_85%_20%,rgba(124,58,237,0.32),transparent_30%),linear-gradient(135deg,#1a1a2e_0%,#211033_45%,#301934_100%)]">
+    <main className="min-h-screen overflow-hidden text-white font-[Poppins] bg-[radial-gradient(circle_at_top_left,#3b0764_0%,#1e1b4b_35%,#09090f_100%)]">
       
 
 
       {/* BACK TO HOME BUTTON */}
-<div className="fixed top-22 left-4 z-50">
+<div className="fixed top-24 left-4 z-50">
   <Link
     to="/"
-    className="flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold text-white hover:bg-white/20 transition shadow-lg"
+    className="flex items-center gap-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 px-4 py-2 text-sm font-semibold text-yellow-300 backdrop-blur-xl shadow-[0_0_25px_rgba(250,204,21,0.18)] hover:bg-yellow-400 hover:text-slate-950 transition"
   >
     <ArrowLeft size={18} />
     Back
@@ -39,28 +38,31 @@ function Research() {
 
 
       {/* Hero */}
-      <section className="relative min-h-[82vh] flex items-center text-center px-6 py-28">
+      <section className="relative min-h-[82vh] flex items-center text-center px-4 sm:px-6 py-28">
+        <div className="absolute top-0 left-0 h-96 w-96 rounded-full bg-purple-500/25 blur-[130px]"></div>
+        <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-indigo-500/25 blur-[150px]"></div>
+        <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-yellow-400/10 blur-[110px]"></div>
         <div className="absolute inset-[80px_10%] rounded-full blur-[70px] bg-gradient-to-br from-yellow-300/10 to-blue-400/10"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto">
           <Badge>Research & Innovation</Badge>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-7">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-7">
             Empowering Minds,{" "}
-            <span className="text-[#ffd966]">Shaping the Future</span>
+            <span className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-orange-400 bg-clip-text text-transparent">Shaping the Future</span>
           </h1>
 
-          <p className="max-w-4xl mx-auto text-lg leading-9 text-[#d8d3e8]">
+          <p className="max-w-4xl mx-auto text-lg leading-9 text-slate-300">
             TOCSI bridges the gap between traditional learning and future-proof technologies through
             purpose-driven research, academic innovation, and visionary mentorship. We believe the youth
-            of India can lead the journey toward <span className="text-sky-300 font-bold">Viksit Bharat</span> through
-            knowledge, inquiry, creativity, and excellence.
+            of India can lead the journey toward <span className="text-yellow-300 font-bold">"Viksit Bharat"</span> through
+            Knowledge, Inquiry, Creativity, and Excellence.
           </p>
         </div>
       </section>
 
       {/* Manifesto */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-16">
         <div className="max-w-6xl mx-auto">
           <GlassCard className="p-8 md:p-12">
             <Badge>The Research Manifesto</Badge>
@@ -93,7 +95,7 @@ function Research() {
             with the tools that define the future of scholarship, industry, and intelligent problem-solving.
           </FeatureCard>
 
-          <FeatureCard icon={<FlaskConical />} title="Innovation Lab">
+          <FeatureCard icon={<FlaskConical />} title="Innovation ">
             TOCSI promotes collaborative problem-solving, design thinking, and out-of-the-box innovation,
             nurturing a mindset where ideas are tested, refined, and transformed into meaningful impact.
           </FeatureCard>
@@ -117,7 +119,7 @@ function Research() {
       </Section>
 
       {/* Scholarly Impact */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-16">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.3fr_0.7fr] gap-7">
           <GlassCard className="p-8 md:p-11">
             <Badge>Scholarly Impact</Badge>
@@ -133,18 +135,18 @@ function Research() {
             </p>
 
             <p className="para mt-4">
-              In the journey toward <span className="text-[#ffd966]">Viksit Bharat</span>, young scholars must become active contributors
+              In the journey toward <span className="text-yellow-300">Viksit Bharat</span>, young scholars must become active contributors
               to innovation, policy thinking, social transformation, and scientific progress. TOCSI exists to train such minds—
               minds that are curious, competent, ethical, and future-ready.
             </p>
           </GlassCard>
 
           <GlassCard className="p-8 md:p-11">
-            <h3 className="text-3xl font-bold text-[#ffd966] mb-6">
+            <h3 className="text-3xl font-bold text-yellow-300 mb-6">
               What We Build in Students
             </h3>
 
-            <ul className="space-y-4 text-[#e8e3f5]">
+            <ul className="space-y-4 text-slate-300">
               {[
                 "Research mindset and academic curiosity",
                 "Confidence in scholarly writing and presentation",
@@ -153,7 +155,7 @@ function Research() {
                 "Purpose-driven contribution to national development",
               ].map((item, index) => (
                 <li key={index} className="flex gap-3 border-b border-white/10 pb-3">
-                  <span className="text-[#ffd966] font-extrabold">✓</span>
+                  <span className="text-yellow-300 font-extrabold">✓</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -165,7 +167,7 @@ function Research() {
       {/* Roadmap */}
       <Section badge="The Scholarly Roadmap" title="From Curious Student to Independent Researcher">
         <div className="relative max-w-4xl mx-auto">
-          <div className="absolute left-5 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#ffd966] to-white/10"></div>
+          <div className="absolute left-5 top-0 bottom-0 w-[2px] bg-gradient-to-b from-yellow-300 to-white/10"></div>
 
           <Timeline title="Curious Student">
             Begins with questions, curiosity, and the desire to understand the world beyond textbooks.
@@ -207,7 +209,7 @@ function Research() {
       </Section>
 
       {/* Spotlight */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-16">
         <GlassCard className="max-w-6xl mx-auto p-8 md:p-12 grid md:grid-cols-2 gap-9 items-center">
           <div>
             <Badge>Innovation Spotlight</Badge>
@@ -220,8 +222,8 @@ function Research() {
             </p>
           </div>
 
-          <div className="rounded-3xl bg-black/25 border border-white/10 p-8">
-            <h3 className="text-2xl font-bold text-[#ffd966] mb-4">
+          <div className="rounded-3xl bg-white/[0.07] border border-white/10 p-8 backdrop-blur-xl shadow-2xl">
+            <h3 className="text-2xl font-bold text-yellow-300 mb-4">
               Sample Spotlight Area
             </h3>
 
@@ -237,14 +239,65 @@ function Research() {
         </GlassCard>
       </section>
 
+
+
+
+
+
+      {/* --- RESEARCH GUIDANCE CTA SECTION --- */}
+<section className="px-4 sm:px-6 py-20">
+  <div className="max-w-5xl mx-auto">
+
+    <div className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.06] backdrop-blur-2xl p-10 md:p-14 text-center shadow-[0_0_40px_rgba(250,204,21,0.10)] hover:shadow-[0_0_55px_rgba(250,204,21,0.18)] transition-all duration-500">
+
+      {/* Glow Effects */}
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-yellow-400/10 blur-3xl rounded-full"></div>
+      <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-purple-500/10 blur-3xl rounded-full"></div>
+
+      {/* Shine Effect */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+      {/* Content */}
+      <div className="relative z-10">
+        
+        <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
+          Need Guidance in{" "}
+          <span className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            Research?
+          </span>
+        </h2>
+
+        <p className="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+          If you are seeking guidance in your research journey, TOCSI is always ready to support, mentor, and guide you.
+        </p>
+
+        <Link
+          to="/#contact"
+          className="inline-block rounded-full border border-yellow-400/30 bg-yellow-400/10 px-8 py-4 font-bold text-yellow-300 shadow-[0_0_30px_rgba(250,204,21,0.15)] hover:bg-yellow-400 hover:text-slate-950 hover:scale-105 hover:shadow-[0_0_45px_rgba(250,204,21,0.25)] transition-all duration-300"
+        >
+          Get Guidance
+        </Link>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
       {/* CTA */}
-      <section className="px-6 py-20 pb-28">
+      <section className="px-4 sm:px-6 py-20 pb-28">
         <GlassCard className="max-w-5xl mx-auto text-center p-9 md:p-14">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
             Join the Research & Innovation Movement
           </h2>
 
-          <p className="max-w-3xl mx-auto text-[#d8d3e8] leading-8 mb-8">
+          <p className="max-w-3xl mx-auto text-slate-300 leading-8 mb-8">
             At TOCSI, we are building not only successful aspirants, but thoughtful researchers,
             innovators, and future nation-builders. Begin your journey toward academic excellence and
             contribute to the vision of a developed India.
@@ -252,7 +305,7 @@ function Research() {
 
           <Link
             to="/live"
-            className="inline-block rounded-full px-9 py-4 bg-gradient-to-r from-[#ffd966] to-yellow-400 text-[#1a1a2e] font-extrabold shadow-[0_16px_40px_rgba(250,204,21,0.28)] hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(250,204,21,0.38)] transition"
+            className="inline-block rounded-full border border-yellow-400/30 bg-yellow-400/10 px-9 py-4 text-yellow-300 font-extrabold shadow-[0_0_35px_rgba(250,204,21,0.18)] hover:bg-yellow-400 hover:text-slate-950 hover:-translate-y-1 hover:shadow-[0_0_45px_rgba(250,204,21,0.28)] transition"
           >
             Explore Live Classes
           </Link>
@@ -265,7 +318,7 @@ function Research() {
 
 function Badge({ children }) {
   return (
-    <span className="inline-block px-6 py-2.5 rounded-full bg-yellow-300/10 border border-yellow-300/30 text-[#ffd966] font-semibold text-sm mb-5 shadow-[0_0_28px_rgba(255,215,0,0.12)]">
+    <span className="inline-block px-6 py-2.5 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-yellow-300 font-semibold text-sm mb-5 shadow-[0_0_28px_rgba(250,204,21,0.12)] backdrop-blur-xl">
       {children}
     </span>
   );
@@ -273,15 +326,19 @@ function Badge({ children }) {
 
 function GlassCard({ children, className = "" }) {
   return (
-    <div className={`rounded-[28px] border border-white/15 bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl shadow-[0_24px_70px_rgba(0,0,0,0.28)] ${className}`}>
-      {children}
+    <div className={`group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.07] backdrop-blur-xl shadow-[0_0_35px_rgba(250,204,21,0.10)] hover:border-yellow-400/40 hover:bg-white/[0.10] hover:shadow-[0_0_45px_rgba(250,204,21,0.16)] transition-all duration-500 ${className}`}>
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+      <div className="pointer-events-none absolute inset-0 rounded-[28px] opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_center,rgba(250,204,21,0.12),transparent_70%)]"></div>
+      <div className="relative z-10">
+        {children}
+      </div>
     </div>
   );
 }
 
 function Section({ badge, title, children }) {
   return (
-    <section className="px-6 py-16">
+    <section className="px-4 sm:px-6 py-16">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <Badge>{badge}</Badge>
@@ -297,7 +354,7 @@ function Section({ badge, title, children }) {
 
 function IconBox({ children }) {
   return (
-    <div className="w-14 h-14 rounded-2xl grid place-items-center text-[#ffd966] bg-yellow-300/10 border border-yellow-300/20 mb-6 [&>svg]:w-8 [&>svg]:h-8">
+    <div className="w-14 h-14 rounded-2xl grid place-items-center text-yellow-300 bg-white/10 border border-white/10 mb-6 [&>svg]:w-8 [&>svg]:h-8 group-hover:bg-yellow-400 group-hover:text-slate-950 transition">
       {children}
     </div>
   );
@@ -305,8 +362,7 @@ function IconBox({ children }) {
 
 function FeatureCard({ icon, title, children }) {
   return (
-    <GlassCard className="group relative overflow-hidden p-8 hover:-translate-y-2 transition duration-300">
-      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition duration-700 bg-gradient-to-r from-transparent via-yellow-200/10 to-transparent"></div>
+    <GlassCard className="p-8 hover:-translate-y-2 transition duration-300">
       <IconBox>{icon}</IconBox>
       <h3 className="text-2xl font-bold mb-4">{title}</h3>
       <p className="para">{children}</p>
@@ -316,13 +372,12 @@ function FeatureCard({ icon, title, children }) {
 
 function MiniCard({ icon, title, text }) {
   return (
-    <GlassCard className="group relative overflow-hidden p-6 text-center hover:scale-105 transition duration-300">
-      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition duration-700 bg-gradient-to-r from-transparent via-yellow-200/10 to-transparent"></div>
-      <div className="mx-auto w-13 h-13 rounded-2xl grid place-items-center text-[#ffd966] bg-yellow-300/10 border border-yellow-300/20 mb-5 [&>svg]:w-7 [&>svg]:h-7">
+    <GlassCard className="p-6 text-center hover:scale-105 transition duration-300">
+      <div className="mx-auto w-13 h-13 rounded-2xl grid place-items-center text-yellow-300 bg-white/10 border border-white/10 mb-5 [&>svg]:w-7 [&>svg]:h-7 group-hover:bg-yellow-400 group-hover:text-slate-950 transition">
         {icon}
       </div>
       <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-[#d8d3e8] text-sm leading-6">{text}</p>
+      <p className="text-slate-300 text-sm leading-6">{text}</p>
     </GlassCard>
   );
 }
@@ -330,9 +385,9 @@ function MiniCard({ icon, title, text }) {
 function Timeline({ title, children }) {
   return (
     <div className="relative grid grid-cols-[46px_1fr] gap-5 mb-7">
-      <div className="relative z-10 w-5 h-5 rounded-full bg-[#ffd966] shadow-[0_0_0_8px_rgba(255,217,102,0.12)] mt-8"></div>
+      <div className="relative z-10 w-5 h-5 rounded-full bg-yellow-300 shadow-[0_0_0_8px_rgba(250,204,21,0.12)] mt-8"></div>
       <GlassCard className="p-7">
-        <h3 className="text-2xl font-bold text-[#ffd966] mb-3">{title}</h3>
+        <h3 className="text-2xl font-bold text-yellow-300 mb-3">{title}</h3>
         <p className="para">{children}</p>
       </GlassCard>
     </div>
@@ -341,12 +396,11 @@ function Timeline({ title, children }) {
 
 function ToolCard({ icon, title, children }) {
   return (
-    <GlassCard className="group relative overflow-hidden p-7 hover:-translate-y-2 transition duration-300">
-      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition duration-700 bg-gradient-to-r from-transparent via-yellow-200/10 to-transparent"></div>
+    <GlassCard className="p-7 hover:-translate-y-2 transition duration-300">
       <IconBox>{icon}</IconBox>
       <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-[#d8d3e8] text-sm leading-6 mb-4">{children}</p>
-      <a href="#" className="text-[#ffd966] font-bold hover:underline">
+      <p className="text-slate-300 text-sm leading-6 mb-4">{children}</p>
+      <a href="#" className="text-yellow-300 font-bold hover:underline">
         Add Link Here
       </a>
     </GlassCard>

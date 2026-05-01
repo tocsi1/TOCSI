@@ -12,16 +12,17 @@ import Footer from './components/Footer';
 import UgcNetPaper1 from './components/UgcNetPaper1'; // The detailed page we created
 import UgcNetPaper2Cs from './components/UgcNetPaper2Cs';
 import JkssbCs from './components/JkssbCs';
+import ScrollToTop from "./components/ScrollToTop";
+import ProtectedRoute from "./components/ProtectedRoute";
+
+
 import AboutTocsi from "./pages/AboutTocsi";
 import Research from "./pages/Research";
 import LiveClasses from "./pages/LiveClasses";
-import ScrollToTop from "./components/ScrollToTop";
-
-
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
-import ProtectedRoute from "./components/ProtectedRoute";
+
 
 
 function ScrollToSection() {
@@ -73,7 +74,15 @@ function App() {
           {/* RESEARCH PAGE ROUTE */}
           <Route path="/research" element={<Research />} />
           
-          <Route path="/live" element={<LiveClasses />} />
+          
+          <Route
+              path="/live"
+              element={
+                <ProtectedRoute>
+                  <LiveClasses />
+                </ProtectedRoute>
+              }
+          />
 
 
           {/* COURSE DETAILS ROUTE */}

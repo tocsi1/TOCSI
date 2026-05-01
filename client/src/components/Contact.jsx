@@ -130,7 +130,7 @@ const Contact = () => {
   },
   {
     name: "YouTube",
-    url: "https://www.youtube.com/@tocsi_education"
+    url: "https://www.youtube.com/channel/UCe4zSbqxGtGXZ0gBp2Ooerg"
   },
   {
     name: "Facebook",

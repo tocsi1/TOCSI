@@ -131,7 +131,7 @@ const AboutTocsi = () => {
             TOCSI is not just a platform —
             <br />
             <span className="bg-gradient-to-r from-yellow-300 via-yellow-500 to-orange-400 bg-clip-text text-transparent">
-              it is a vision.
+              it is a Vision.
             </span>
           </motion.h1>
 
@@ -148,7 +148,7 @@ const AboutTocsi = () => {
                 (Team of Collaborative Studies and Innovation)
               </span>{" "}
               is not just a platform — it is a vision to guide every young mind towards clarity, purpose, and meaningful direction in life, with a belief that empowered youth are the foundation of a{" "}
-              <span className="text-yellow-300 font-bold">Viksit Bharat</span>.
+              <span className="text-yellow-300 font-bold">"Viksit Bharat"</span>.
             </p>
           </motion.div>
 
@@ -167,10 +167,8 @@ const AboutTocsi = () => {
 
               <p className="font-[Poppins] text-lg md:text-xl lg:text-2xl leading-[1.9] text-slate-300">
                 I envision an India that stands as a true{" "}
-                <span className="text-yellow-300 font-bold">Vishwa Guru</span>{" "}
-                — I envision an INDIA that stands as a true{" "}
-                <span className="text-yellow-300 font-bold">Vishwa Guru</span>{" "}
-                — a developed and self-reliant nation that leads the world through knowledge, wisdom, innovation, values, and global leadership.
+                <span className="text-yellow-300 font-bold">"Vishwa Guru"</span>{" "}
+                — a developed and self-reliant nation "Atmanirbhar Bharat" that leads the world through Knowledge, Wisdom, Innovation, Values, and Global Leadership.
               </p>
 
               <motion.div
@@ -269,7 +267,7 @@ const AboutTocsi = () => {
               I believe that empowering young minds is not just education —
               <br />
               <span className="bg-gradient-to-r from-yellow-300 via-yellow-500 to-orange-400 bg-clip-text text-transparent">
-                it is the highest form of service, the purest form of patriotism.
+                it is the highest form of Service, the purest form of Patriotism.
               </span>
             </p>
           </motion.div>
@@ -290,7 +288,7 @@ const AboutTocsi = () => {
               </p>
 
               <h2 className="font-[Montserrat] text-3xl md:text-6xl font-extrabold bg-gradient-to-r from-yellow-300 via-yellow-500 to-orange-400 bg-clip-text text-transparent">
-                Viksit Bharat. Vishwa Guru.
+                "Viksit Bharat". "Vishwa Guru".
               </h2>
             </div>
           </motion.div>
@@ -482,16 +480,13 @@ Because true nation-building does not begin with systems — it begins with indi
             </h2>
 
             <p className="text-slate-300 leading-8 mb-5">
-              I created TOCSI with a deeply personal purpose. Like many aspirants across India, I experienced
-              the uncertainty, lack of direction, limited access to quality mentorship, and silent struggles that
-              students often face while preparing for competitive examinations.
+            I created TOCSI with a deeply personal purpose. Like many young minds across India, I experienced uncertainty, lack of direction, limited access to the right guidance, and the silent struggles that often go unseen. 
+            TOCSI was born not just to address these challenges, but to create a space where clarity replaces confusion, purpose replaces doubt, and individuals are empowered to realize their true potential and move forward with confidence.
             </p>
 
             <p className="text-slate-300 leading-8 mb-5">
-              My journey as a learner, a researcher, and now an <span className="text-yellow-400">Assistant Professor  </span>
-              taught me that talent alone is not enough—students also need the right guidance, the right environment,
-              and someone who genuinely believes in their potential. That is why TOCSI was built: so that no sincere
-              aspirant has to walk the difficult road alone.
+            My journey as a learner, a researcher, and an <span className="text-yellow-400">Assistant Professor</span> has shown me that talent alone is never enough—what truly shapes growth is the right guidance, a supportive environment, and someone who genuinely believes in your potential. 
+            TOCSI was built with this vision: to create an ecosystem where individuals find clarity, build confidence, and move forward with purpose—ensuring that no determined mind has to navigate their journey alone.
             </p>
 
             <p className="text-slate-300 leading-8">
@@ -529,22 +524,22 @@ Because true nation-building does not begin with systems — it begins with indi
               {
                 number: "1",
                 title: "Aspirant",
-                desc: "Begin with ambition, clarity of purpose, and the dream to build a meaningful future.",
+                desc: "Begin with ambition, a sense of purpose, and the desire to create a meaningful future.",
               },
               {
                 number: "2",
                 title: "Guided Learner",
-                desc: "Gain structured preparation, premium resources, and consistent mentor support.",
+                desc: "Move forward with clarity through the right guidance, a supportive environment, and continuous learning.",
               },
               {
                 number: "3",
                 title: "Confident Performer",
-                desc: "Strengthen concepts, improve performance, and build exam temperament through practice.",
+                desc: "Build confidence, strengthen your abilities, and develop the mindset to perform with clarity and conviction.",
               },
               {
                 number: "4",
                 title: "Achiever",
-                desc: "Step forward with confidence as a successful candidate, scholar, and contributor to the nation.",
+                desc: "Step forward as a confident individual, ready to contribute, lead, and create impact in the real world.",
               },
             ].map((item, index) => (
               <motion.div
@@ -582,11 +577,11 @@ Because true nation-building does not begin with systems — it begins with indi
             <Quote size={42} className="text-yellow-400 mx-auto mb-6" />
 
             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-5">
-              At TOCSI, we don’t just teach subjects; we build the confidence to conquer them.
+            “At TOCSI, we don’t just impart knowledge—we cultivate confidence, clarity, and the mindset to navigate challenges and create meaningful impact.”
             </h2>
 
             <p className="text-slate-300 text-lg">
-              Student-first philosophy • Mentor-led preparation • Vision-driven learning
+            Student-first mindset • Mentor-guided growth • Purpose-driven learning
             </p>
           </motion.div>
         </div>
@@ -614,12 +609,12 @@ Because true nation-building does not begin with systems — it begins with indi
 
             <p className="text-slate-300 leading-8 mb-5">
               TOCSI stands for collaborative studies because we believe growth becomes stronger when learning is shared.
-              Our vision is to create a community where students motivate one another, exchange ideas, and rise together.
+              Our vision is to create a community where learners motivate one another, exchange ideas, and rise together.
             </p>
 
             <p className="text-slate-300 leading-8">
               Here, education is not one-directional. It is interactive, supportive, and deeply human—built on the belief
-              that collective progress creates stronger individuals and a stronger nation.
+              that collective progress creates stronger individuals and a Stronger Nation.
             </p>
           </motion.div>
 
@@ -642,12 +637,12 @@ Because true nation-building does not begin with systems — it begins with indi
 
             <p className="text-slate-300 leading-8 mb-5">
               TOCSI is committed to shaping learners who are not only exam-ready but also intellectually strong,
-              ethically grounded, and capable of meaningful contribution to society.
+              ethically grounded, and capable of meaningful contribution to Society.
             </p>
 
             <p className="text-slate-300 leading-8">
-              Through nation-building through education, we aspire to build a generation that leads with knowledge,
-              confidence, and character.
+              Nation-building through Education, we aspire to build a generation that leads with Knowledge,
+              Confidence, and Character.
             </p>
           </motion.div>
         </div>
