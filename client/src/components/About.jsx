@@ -111,8 +111,9 @@ const About = () => {
               <div className="rounded-3xl bg-white/90 p-5">
                 <p className="text-slate-700 font-medium leading-7">
                   “Guidance is not just about teaching — it is about helping
-                  young minds find direction, discipline, and purpose.”
+                  young minds find Direction, Discipline, and Purpose.!”   
                 </p>
+                <p className="text-slate-700 font-medium leading-7 italic" >~ Arun Singh Katoch</p>
               </div>
             </div>
           </motion.div>
