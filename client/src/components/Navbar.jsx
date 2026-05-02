@@ -196,7 +196,7 @@ useEffect(() => {
               <div className="relative">
                 <button
                   onClick={() => setShowProfileMenu(!showProfileMenu)}
-                  className="flex items-center gap-3 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition transform hover:scale-105"
+                  className="flex items-center gap-3 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition transform hover:scale-105 cursor-pointer"
                 >
                   <div className="w-8 h-8 rounded-full bg-white text-purple-700 flex items-center justify-center font-bold">
                     {currentUser.name ? currentUser.name.charAt(0).toUpperCase() : "U"}
@@ -213,7 +213,7 @@ useEffect(() => {
 
                 {/* Profile dropdown */}
                 {showProfileMenu && (
-                  <div className="absolute right-0 mt-3 w-60 bg-white rounded-2xl shadow-xl border border-purple-100 p-4 z-[10000]">
+                  <div className="absolute right-0 mt-3 w-60 bg-white rounded-2xl shadow-xl border border-purple-100 p-4 z-[10000] " >
                     <p className="text-sm font-bold text-slate-800">
                       {currentUser.name || "TOCSI User"}
                     </p>
@@ -225,14 +225,14 @@ useEffect(() => {
                     <Link
                       to="/dashboard"
                       onClick={() => setShowProfileMenu(false)}
-                      className="block mt-4 text-center bg-purple-100 text-purple-700 py-2 rounded-xl font-semibold hover:bg-purple-200 transition"
+                      className="block mt-4 text-center bg-purple-100 text-purple-700 py-2 rounded-xl font-semibold hover:bg-purple-200 transition cursor-pointer"
                     >
                       Dashboard
                     </Link>
 
                     <button
                       onClick={handleLogout}
-                      className="mt-3 w-full bg-red-500 text-white py-2 rounded-xl font-semibold hover:bg-red-600 transition"
+                      className="mt-3 w-full bg-red-500 text-white py-2 rounded-xl font-semibold hover:bg-red-600 transition cursor-pointer"
                     >
                       Logout
                     </button>

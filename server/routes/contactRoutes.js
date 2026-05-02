@@ -1,12 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 router.post("/", async (req, res) => {
   const { name, email, message } = req.body;
 
   try {
-    // Basic validation
+    // Validation
     if (!name || !email || !message) {
       return res.status(400).json({
         success: false,
@@ -14,21 +16,10 @@ router.post("/", async (req, res) => {
       });
     }
 
-    // Mail config using ENV variables
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false, // IMPORTANT
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
+    await resend.emails.send({
+      from: "TOCSI <onboarding@resend.dev>", // DO NOT CHANGE NOW
+      to: process.env.EMAIL_TO,
       replyTo: email,
-      to: process.env.EMAIL_USER,
       subject: "New message from TOCSI website",
       html: `
         <h2>New Contact Message from TOCSI Website</h2>
@@ -37,9 +28,7 @@ router.post("/", async (req, res) => {
         <p><b>Message:</b></p>
         <p>${message}</p>
       `,
-    };
-
-    await transporter.sendMail(mailOptions);
+    });
 
     res.json({
       success: true,
@@ -47,7 +36,7 @@ router.post("/", async (req, res) => {
     });
 
   } catch (error) {
-    console.error("Contact email error:", error.message);
+    console.error("Contact email error:", error);
 
     res.status(500).json({
       success: false,
