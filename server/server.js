@@ -7,7 +7,7 @@ const contactRoutes = require("./routes/contactRoutes");
 const app = express();
 
 app.use(cors({
-  origin: "https://tocsi.netlify.app",
+  origin: "https://tocsi.vercel.app",
   methods: ["GET", "POST"],
   credentials: true
 }));
