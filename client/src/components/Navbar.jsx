@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
+
+
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { doc, updateDoc } from "firebase/firestore";
+import { doc, updateDoc, onSnapshot,getDoc } from "firebase/firestore";
 import { auth, db } from "../firebase";
 
 const Navbar = () => {
@@ -17,20 +19,89 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
+
+
   // Check if user is logged in or logged out
+
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
-        const storedUser = JSON.parse(localStorage.getItem("user"));
-        setCurrentUser(storedUser || user);
+        const userRef = doc(db, "users", user.uid);
+        const userSnap = await getDoc(userRef);
+  
+        if (userSnap.exists()) {
+          const userData = userSnap.data();
+  
+          const finalUser = {
+            uid: user.uid,
+            name: userData.name,
+            email: user.email,
+            role: userData.role,
+            paymentStatus: userData.paymentStatus,
+            allowedCourses: userData.allowedCourses
+          };
+  
+          localStorage.setItem("user", JSON.stringify(finalUser));
+          setCurrentUser(finalUser);
+        } else {
+          setCurrentUser({
+            uid: user.uid,
+            name: "User",
+            email: user.email
+          });
+        }
       } else {
         setCurrentUser(null);
       }
     });
-
+  
     return () => unsubscribe();
   }, []);
+ 
 
+
+
+
+
+  // Auto logout this device if user logs in from another device
+useEffect(() => {
+  const user = auth.currentUser;
+
+  if (!user) return;
+
+  const userRef = doc(db, "users", user.uid);
+
+  const unsubscribe = onSnapshot(userRef, async (docSnap) => {
+    if (!docSnap.exists()) return;
+
+    const userData = docSnap.data();
+    const localSessionId = localStorage.getItem("tocsi_session_id");
+
+    if (
+      localSessionId &&
+      userData.sessionId &&
+      userData.sessionId !== localSessionId
+    ) {
+      await signOut(auth);
+
+      localStorage.removeItem("user");
+      localStorage.removeItem("tocsi_device_id");
+      localStorage.removeItem("tocsi_session_id");
+
+      setCurrentUser(null);
+      setShowProfileMenu(false);
+      setIsOpen(false);
+
+      navigate("/login", {
+        state: {
+          message: "Your account was logged in on another device."
+        }
+      });
+    }
+  });
+
+  return () => unsubscribe();
+}, [currentUser, navigate]);
 
 
   
@@ -53,6 +124,7 @@ const Navbar = () => {
 
       localStorage.removeItem("user");
       localStorage.removeItem("tocsi_device_id");
+      localStorage.removeItem("tocsi_session_id");
 
       setCurrentUser(null);
       setShowProfileMenu(false);
@@ -119,6 +191,7 @@ const Navbar = () => {
             
 
             {/* Show profile after login, otherwise show Login button */}
+            
             {currentUser ? (
               <div className="relative">
                 <button
@@ -129,9 +202,13 @@ const Navbar = () => {
                     {currentUser.name ? currentUser.name.charAt(0).toUpperCase() : "U"}
                   </div>
 
-                  <span className="max-w-[120px] truncate">
+                  <span className="font-bold">
                     {currentUser.name || "User"}
                   </span>
+                  <ChevronDown  size={18}  className={`transition ${showProfileMenu ? "rotate-180" : ""}`} />
+
+
+
                 </button>
 
                 {/* Profile dropdown */}
@@ -160,6 +237,7 @@ const Navbar = () => {
                       Logout
                     </button>
                   </div>
+
                 )}
               </div>
             ) : (

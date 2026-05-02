@@ -28,7 +28,7 @@ const Courses = () => {
       id: 2,
       title: "Study Resources",
       desc: "Notes, guidance, and preparation support for all learners",
-      path: "/research",
+      path: " ",
     },
   ];
 
@@ -144,7 +144,7 @@ const Courses = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[0.9fr_1.1fr]">
           {/* FREE */}
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 shadow-2xl backdrop-blur-2xl md:p-8">
             <div className="mb-8">
