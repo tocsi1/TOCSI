@@ -26,7 +26,7 @@ const Contact = () => {
     setStatus({ type: "", text: "" });
 
     try {
-      const response = await fetch("https://tocsi-backend.onrender.com/contact", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
