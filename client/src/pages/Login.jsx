@@ -40,6 +40,11 @@ const Login = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+
+    // Clear old warning message when user starts typing again
+    if (message) {
+      setMessage("");
+    }
   };
 
   // Send password reset email
@@ -69,6 +74,9 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Remove old redirected message before fresh login attempt
+    setMessage("");
 
     try {
       const userCredential = await signInWithEmailAndPassword(
@@ -103,9 +111,9 @@ const Login = () => {
       }
 
       const deviceId = getDeviceId();
-
       const sessionId = crypto.randomUUID();
 
+      // New login becomes the active session/device
       await updateDoc(userRef, {
         activeDeviceId: deviceId,
         sessionId: sessionId
@@ -192,12 +200,9 @@ const Login = () => {
           required
         />
 
-       
-
         <button className="w-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-3 rounded-xl font-bold hover:from-purple-400 hover:to-indigo-400 transition cursor-pointer shadow-lg shadow-purple-900/40">
           Login
         </button>
-
 
         <div className="text-center">
           <button
@@ -212,8 +217,6 @@ const Login = () => {
           </button>
         </div>
 
-
-
         <p className="text-center text-sm text-purple-100">
           Don’t have an account?{" "}
           <Link to="/signup" className="text-white font-semibold hover:text-purple-200">
@@ -222,65 +225,57 @@ const Login = () => {
         </p>
       </form>
 
-    
-      
-
-
       {/* Premium Forgot Password Modal */}
-{showForgotPassword && (
-  <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-gradient-to-br from-slate-950/95 via-purple-950/95 to-slate-900/95 backdrop-blur-md px-4">
-    
-    <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"></div>
-    <div className="absolute bottom-20 right-10 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl"></div>
+      {showForgotPassword && (
+        <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-gradient-to-br from-slate-950/95 via-purple-950/95 to-slate-900/95 backdrop-blur-md px-4">
+          
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl"></div>
 
-    <div className="relative z-10 w-full max-w-md bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl p-8 overflow-hidden space-y-5">
-      <div className="text-center space-y-2">
-      <p className="text-sm uppercase tracking-[0.3em] text-yellow-300 font-semibold">
-        TOCSI
-      </p>
+          <div className="relative z-10 w-full max-w-md bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl p-8 overflow-hidden space-y-5">
+            <div className="text-center space-y-2">
+              <p className="text-sm uppercase tracking-[0.3em] text-yellow-300 font-semibold">
+                TOCSI
+              </p>
 
-        <h3 className="text-3xl font-extrabold text-white">
-          Reset Password
-        </h3>
+              <h3 className="text-3xl font-extrabold text-white">
+                Reset Password
+              </h3>
 
-        <p className="text-sm text-purple-100">
-          Enter your TOCSI registered email address to receive a secure password reset link.
-        </p>
-      </div>
+              <p className="text-sm text-purple-100">
+                Enter your TOCSI registered email address to receive a secure password reset link.
+              </p>
+            </div>
 
-      <input
-        type="email"
-        placeholder="Enter registered email"
-        value={resetEmail}
-        onChange={(e) => setResetEmail(e.target.value)}
-        className="w-full p-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-purple-200 outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500/40 transition"
-      />
+            <input
+              type="email"
+              placeholder="Enter registered email"
+              value={resetEmail}
+              onChange={(e) => setResetEmail(e.target.value)}
+              className="w-full p-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-purple-200 outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500/40 transition"
+            />
 
-      <button
-        type="button"
-        onClick={handleForgotPassword}
-        className="w-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-3 rounded-xl font-bold hover:from-purple-400 hover:to-indigo-400 transition cursor-pointer shadow-lg shadow-purple-900/40"
-      >
-        Send Reset Link
-      </button>
+            <button
+              type="button"
+              onClick={handleForgotPassword}
+              className="w-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-3 rounded-xl font-bold hover:from-purple-400 hover:to-indigo-400 transition cursor-pointer shadow-lg shadow-purple-900/40"
+            >
+              Send Reset Link
+            </button>
 
-      <button
-        type="button"
-        onClick={() => {
-          setShowForgotPassword(false);
-          setResetEmail("");
-        }}
-        className="w-full bg-white/10 text-purple-100 py-3 rounded-xl font-semibold hover:bg-white/15 transition border border-white/10 cursor-pointer"
-      >
-        Cancel
-      </button>
-    </div>
-  </div>
-)}
-
-
-
-
+            <button
+              type="button"
+              onClick={() => {
+                setShowForgotPassword(false);
+                setResetEmail("");
+              }}
+              className="w-full bg-white/10 text-purple-100 py-3 rounded-xl font-semibold hover:bg-white/15 transition border border-white/10 cursor-pointer"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
 
     </div>
   );
