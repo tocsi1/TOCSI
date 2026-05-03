@@ -4,7 +4,7 @@ import { Zap, BookOpen, ShieldCheck, Users } from 'lucide-react';
 const Features = () => {
   const featureList = [
     { icon: <Zap className="w-8 h-8" />, title: "Live Interaction", desc: "Real-time doubt solving sessions with mentor." },
-    { icon: <BookOpen className="w-8 h-8" />, title: "Expert-curated content", desc: "Access notes curated for JKSSB and UGC-NET." },
+    { icon: <BookOpen className="w-8 h-8" />, title: "Expert-curated content", desc: "Access notes curated for UGC-NET." },
     { icon: <ShieldCheck className="w-8 h-8" />, title: "Success Strategy", desc: "Proven methods to transform aspirations into results." },
     { icon: <Users className="w-8 h-8" />, title: "Community Support", desc: "Learn alongside a network of dedicated achievers." }
   ];
@@ -14,6 +14,50 @@ const Features = () => {
       <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-purple-500/25 blur-[130px]"></div>
       <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-indigo-500/25 blur-[150px]"></div>
       <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-yellow-400/10 blur-[110px]"></div>
+
+
+
+
+
+      {/* badge premium course */}
+          <a
+            href="https://forms.gle/RAjFhqPTRUkvYEWq9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block mx-auto mt-6 mb-8 w-fit group"
+          >
+            <div className="relative w-40 sm:w-44 md:w-48 rounded-3xl p-[3px] bg-gradient-to-r from-yellow-300 via-pink-500 to-purple-500 shadow-[0_0_40px_rgba(250,204,21,0.35)] hover:scale-105 transition duration-300">
+              
+              <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] sm:text-xs font-extrabold px-3 py-1 rounded-full animate-pulse shadow-lg z-10">
+                HOT
+              </div>
+
+              <div className="rounded-3xl bg-white/95 backdrop-blur-xl p-4 sm:p-5 text-center">
+                <p className="text-[10px] sm:text-xs font-bold text-purple-700 uppercase tracking-wide">
+                  Limited Offer
+                </p>
+
+                <h3 className="mt-2 text-sm sm:text-base md:text-lg font-extrabold text-purple-950 leading-tight">
+                  Join UGC-NET Paper-1 Premium
+                </h3>
+
+                <div className="my-3 sm:my-4">
+                  <span className="text-3xl sm:text-4xl font-black text-red-600">₹1499</span>
+                </div>
+
+                <div className="bg-gradient-to-r from-purple-700 to-indigo-700 text-white py-2 rounded-xl text-xs sm:text-sm font-bold shadow-md group-hover:from-yellow-400 group-hover:to-orange-400 group-hover:text-purple-950 transition">
+                  Enroll Now
+                </div>
+              </div>
+            </div>
+          </a>
+
+
+
+
+
+
+
 
       <div className="relative max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
         {featureList.map((f, i) => (
@@ -41,6 +85,11 @@ const Features = () => {
           </div>
         ))}
       </div>
+
+      
+
+
+          
     </section>
   );
 };

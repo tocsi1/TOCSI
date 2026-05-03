@@ -20,38 +20,7 @@ const Hero = () => {
             Transforming <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent"> Aspirations </span> <br/> into <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent"> Achievements </span>
           </h1>
 
-          {/* badge premium course */}
-          <a
-            href="https://forms.gle/RAjFhqPTRUkvYEWq9"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block mx-auto mt-6 mb-8 w-fit group"
-          >
-            <div className="relative w-40 sm:w-44 md:w-48 rounded-3xl p-[3px] bg-gradient-to-r from-yellow-300 via-pink-500 to-purple-500 shadow-[0_0_40px_rgba(250,204,21,0.35)] hover:scale-105 transition duration-300">
-              
-              <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] sm:text-xs font-extrabold px-3 py-1 rounded-full animate-pulse shadow-lg z-10">
-                HOT
-              </div>
-
-              <div className="rounded-3xl bg-white/95 backdrop-blur-xl p-4 sm:p-5 text-center">
-                <p className="text-[10px] sm:text-xs font-bold text-purple-700 uppercase tracking-wide">
-                  Limited Offer
-                </p>
-
-                <h3 className="mt-2 text-sm sm:text-base md:text-lg font-extrabold text-purple-950 leading-tight">
-                  Join Paper-1 Premium
-                </h3>
-
-                <div className="my-3 sm:my-4">
-                  <span className="text-3xl sm:text-4xl font-black text-red-600">₹1499</span>
-                </div>
-
-                <div className="bg-gradient-to-r from-purple-700 to-indigo-700 text-white py-2 rounded-xl text-xs sm:text-sm font-bold shadow-md group-hover:from-yellow-400 group-hover:to-orange-400 group-hover:text-purple-950 transition">
-                  Enroll Now
-                </div>
-              </div>
-            </div>
-          </a>
+         
 
           <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             Live Classes • Recorded Videos • Expert-Curated Notes for UGC-NET, JK-SET and JKSSB.
