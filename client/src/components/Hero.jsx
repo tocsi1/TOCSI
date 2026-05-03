@@ -16,7 +16,7 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
             Transforming <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent"> Aspirations </span> <br/> into <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent"> Achievements </span>
           </h1>
 
@@ -25,11 +25,11 @@ const Hero = () => {
             href="https://forms.gle/RAjFhqPTRUkvYEWq9"
             target="_blank"
             rel="noopener noreferrer"
-            className="block mx-auto mt-6 md:absolute md:right-12 md:top-28 md:mt-0 group"
+            className="block mx-auto mt-6 mb-8 w-fit group"
           >
             <div className="relative w-40 sm:w-44 md:w-48 rounded-3xl p-[3px] bg-gradient-to-r from-yellow-300 via-pink-500 to-purple-500 shadow-[0_0_40px_rgba(250,204,21,0.35)] hover:scale-105 transition duration-300">
               
-              <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] sm:text-xs font-extrabold px-3 py-1 rounded-full animate-pulse shadow-lg">
+              <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] sm:text-xs font-extrabold px-3 py-1 rounded-full animate-pulse shadow-lg z-10">
                 HOT
               </div>
 
