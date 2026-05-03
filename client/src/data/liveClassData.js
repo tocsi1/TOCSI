@@ -6,7 +6,9 @@ const liveClasses = [
       mentor: "Arun Singh Katoch",
       time: "Starts at 7:00 PM",
       icon: "⏰",
-      videoId: "YOUR_YOUTUBE_VIDEO_ID",
+      videoId: "https://meet.google.com/qzm-ziuz-eqy",
+     
+      meetLink: "https://meet.google.com/awv-kubm-uza"
     },
     {
       id: "jkssb",
@@ -14,7 +16,7 @@ const liveClasses = [
       mentor: "Arun Singh Katoch",
       time: "Starts at 9:00 PM",
       icon: "📅",
-      videoId: "YOUR_YOUTUBE_VIDEO_ID",
+      videoId: " ",
     },
     
   ];

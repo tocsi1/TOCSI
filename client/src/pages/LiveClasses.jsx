@@ -87,12 +87,35 @@ function LiveClasses() {
                 </span>
               </p>
 
-              <button
+
+              {/* youtube */}
+
+              {/* <button
                 onClick={() => startClass(item)}
-                className="relative z-10 w-full rounded-full px-6 py-3 bg-gradient-to-r from-yellow-300 to-yellow-500 text-[#1a1a2e] font-extrabold shadow-[0_16px_40px_rgba(250,204,21,0.25)] hover:-translate-y-1 transition"
+                className=" cursor-pointer relative z-10 w-full rounded-full px-6 py-3 bg-gradient-to-r from-yellow-300 to-yellow-500 text-[#1a1a2e] font-extrabold shadow-[0_16px_40px_rgba(250,204,21,0.25)] hover:-translate-y-1 transition"
               >
                 Join Now
-              </button>
+              </button> */}
+
+   
+
+                {/*  for Meet classes  */}
+                  <button
+                    onClick={() => {
+                      if (item.meetLink) {
+                        window.open(item.meetLink, "_blank", "noopener,noreferrer");
+                      } else {
+                        alert("Class link not available yet");
+                      }
+                    }}
+                    className="cursor-pointer relative z-10 w-full rounded-full px-6 py-3 bg-gradient-to-r from-yellow-300 to-yellow-500 text-[#1a1a2e] font-extrabold shadow-[0_16px_40px_rgba(250,204,21,0.25)] hover:-translate-y-1 transition"
+                  >
+                    Join Now
+                  </button>
+
+
+
+
             </div>
           ))}
         </div>
@@ -111,7 +134,7 @@ function LiveClasses() {
 
               <button
                 onClick={closeClass}
-                className="rounded-full px-6 py-3 bg-red-500/20 border border-red-400/30 text-red-200 font-bold hover:bg-red-500/30 transition"
+                className=" cursor-pointer rounded-full px-6 py-3 bg-red-500/20 border border-red-400/30 text-red-200 font-bold hover:bg-red-500/30 transition"
               >
                 Close Player
               </button>
